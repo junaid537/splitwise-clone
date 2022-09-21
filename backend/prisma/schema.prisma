@@ -1,0 +1,108 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// 1 means added by prisma on press of Ctrl+Shift+I (when beautifying)
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int            @id @default(autoincrement())
+  updatedAt    DateTime       @updatedAt
+  image        String?        @db.VarChar(500)
+  name         String         @db.VarChar(500)
+  email        String         @unique
+  Groups       Group[]
+  userToGroups userToGroups[] //1
+  Expense      Expense[] //1
+  oweTo        Owe[]          @relation("ower")
+  receiveFrom  Owe[]          @relation("receiver")
+  person1      Friends[]      @relation("person1")
+  person2      Friends[]      @relation("person2")
+
+  @@map(name: "user")
+}
+
+model Group {
+  id           Int            @id @default(autoincrement())
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  user         User           @relation(fields: [creatorId], references: [id])
+  creatorId    Int
+  name         String
+  userToGroups userToGroups[] //1
+  Expense      Expense[] //1
+
+  @@map(name: "group")
+}
+
+model userToGroups {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  groupId   Int
+  group     Group    @relation(fields: [groupId], references: [id])
+
+  @@map(name: "usertogroups")
+}
+
+model Expense {
+  id            Int      @id @default(autoincrement())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  description   String
+  splitCategory Category @default(Equal)
+  total_amt     Float
+  groupId       Int
+  group         Group    @relation(fields: [groupId], references: [id])
+  userId        Int
+  user          User     @relation(fields: [userId], references: [id])
+  status        Boolean  @default(false)
+
+  //@@unique([userId, groupId])
+  @@map(name: "expense")
+}
+
+enum Category {
+  Equal
+  Unequal
+  Percent
+  Share
+}
+
+//Owe is self relation of user
+model Owe {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  //expenseId Int
+  //expense   Expense  @relation(fields: [expenseId], references: [id])
+  userId1   Int
+  ower      User     @relation("ower", fields: [userId1], references: [id])
+  userId2   Int
+  receiver  User     @relation("receiver", fields: [userId2], references: [id])
+  amount    Float    @default(0)
+  status    Boolean  @default(false)
+
+  //@@unique([userId1, userId2, expenseId])
+  @@map(name: "owe")
+}
+
+model Friends {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId1   Int
+  user      User     @relation("person1", fields: [userId1], references: [id])
+  userId2   Int
+  friends   User     @relation("person2", fields: [userId2], references: [id])
+}
+
+// Friends1     Friends?       @relation("friends",fields: [friendsId], references: [id])
+//   friendsId    Int?
+//   Friends      Friends[]      @relation("user")

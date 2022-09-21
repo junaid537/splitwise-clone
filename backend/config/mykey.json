@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "bc-prod-303705",
+    "private_key_id": "46f879afca9c88820dd43be8353a0e802d392317",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCaG6h8AuXU5ssI\n64TdbgElobAWcZ+czj38j3E+ComavZfyyk++gaMWIZY8cLZA/omy8qW6ukorBTY7\nlsJ7kFQ+gmwoi++cr6D01FVUmY8dKCbhDDwgQZJr81KaEy+V8wDe57J6RmzxkClA\nHfUR+jNVkXzHwpbk31OMY7FLXcdfJHheVtWoc14bq/ii3I3siu1OzP2NN3IV9vwt\nzWo0NXnVMVTFevw64jl1+KFlhtzhstR/zrm/d2ePxJCOzCdZ1Y7ZS2NSf8JK1GxF\nwnLl9vU+H1fSlpnUtYmUzx+/9AOMyncLuJxf2WLpiXSF44q08NVVUMvxC17dj84P\n+cG4bAo/AgMBAAECggEAINX71FCZv/9dC42DRdsGi4okBuQ26iZXttSpgFqmbz4u\nfiD1VNYydai6Zi5t5vNVS7e/8EV5QClgINpCnilmidsoSItohq41UXVcqSX/BGtl\nvVXqCcVu+WljFEk6Pm0Epnof4UXYOLBK2cqISUhSX80cFUQ0+pdLKgKj6DcXIAJE\nqZsW/EZMshPEaqZQP38oso6s42R1kPYm3oicJcMMwoSv5wlQ6mh7LEC2wi0B/BhS\n8BADlI4x0roWD59GPHaaRRn7CBC6mC1Q/Y8MkhID61YDuoJ6lAPi+huih+4QfeoG\n1PhoeVU8X9lYPycmz4SvyPFpOhxzzHyMEQD5DVQvoQKBgQDLAspueDisXOz0+s9D\njnetg8jVzaJymZyxZaXTvn2cMcJB15KGvWTxcVPA2FiYDXDIn5hPHGFNRkgQt45M\nuRsnb/09OMhHg8q0uVzZIOb9YQ0jCgLoZ24sjvyrtImtTBxPJjwcF0OE8XxRnbI0\niZhXAQfknFn0/KDyOCOqWw807QKBgQDCVSxT/LogZTMy6TGJU3P4Q3Ab+jjzERLx\nmSijeCci+y9gvTGSPb0fvuhu+0FnybqxvpKZx1pUpFh6rR/5W8f+VTU2tYzmC3Uz\nDyVliYsOIayDPQ9iHCEHjhjpv9+DR06qJsPmQXDgcTyUfP5DDeArXIyfQTq6c+IE\nABOBXBfiWwKBgDP7UfQ5amGQJciQ1DN7Ll/Kp8k/L0Ji3QF7gpuWYjl1cEVFuqov\nosJD/2sYuo6sml10qB5RqQSNY3SMW65/k1lkzpY3jOjq8SOXdxPN3fexOxjmvlnd\n6hMUxdP9lWc/XtxRcQDMYCiRYQDQ/UmAlfZpOCksc8hMS7XZ9B/x0xH9AoGBALjM\nqjTMFmuMER4O586Bj7y81LWmQ9XRnMQnM6AQOJdpamqCP8uj7l9r+jjfshjymxk/\n8sVN8DaheopebBODFjJj8RCvoOd6ad8+Pf/KxnOPzi+XNzPDMB2xITvX/MMoYkQo\nTQ5/mMm2pTdHjbtSTKSvhAJF04VPgdTwBZx0aToVAoGBAJVS9XbpIBSTtMld+5Gn\nEp3uzvRQjoQtdHQnruWa1jtoCF8zDS1Ie7/hb1la6smhlgOAyZeIRtlGUMbvYCtK\nxnTpX6qG2TIBGVNAUi1vGD7Z+vw1VRGlYSY0x25n0fFcWXqGz3NhViVYfv9Ft0oh\nIs3zMif7TyvvRNC73IZFkUZ2\n-----END PRIVATE KEY-----\n",
+    "client_email": "junaid-project@bc-prod-303705.iam.gserviceaccount.com",
+    "client_id": "107746979947259643203",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/junaid-project%40bc-prod-303705.iam.gserviceaccount.com"
+}
